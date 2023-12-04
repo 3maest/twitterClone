@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bookmarks</title>
+    <link rel="stylesheet" href="bookmarks.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- sidebar starts -->
+    <div class="sidebar">
+      <i class="fab fa-twitter"></i>
+      <div class="sidebarOption" onclick="goToHomepage()">
+        <span class="material-icons"> home </span>
+        <h2>Home</h2>
+      </div>
+
+      <div class="sidebarOption" onclick="goToExplore()">
+        <span class="material-icons"> search </span>
+        <h2>Explore</h2>
+      </div>
+
+      <div class="sidebarOption" onclick="goToNotifications()">
+        <span class="material-icons"> notifications_none </span>
+        <h2>Notifications</h2>
+      </div>
+
+      <div class="sidebarOption" onclick="goToMessages()">
+        <span class="material-icons"> mail_outline </span>
+        <h2>Messages</h2>
+      </div>
+
+      <div class="sidebarOption active" onclick="goToBookmarks()">
+        <span class="material-icons"> bookmark_border </span>
+        <h2>Bookmarks</h2>
+      </div>
+
+      <div class="sidebarOption" onclick="goToLists()">
+        <span class="material-icons"> list_alt </span>
+        <h2>Lists</h2>
+      </div>
+
+      <div class="sidebarOption" onclick="goToProfile()">
+        <span class="material-icons"> perm_identity </span>
+        <h2>Profile</h2>
+      </div>
+
+      <div class="sidebarOption" onclick="goToMore()">
+        <span class="material-icons"> more_horiz </span>
+        <h2>More</h2>
+      </div>
+      <button class="sidebar__tweet">Tweet</button>
+    </div>
+    <!-- sidebar ends -->
+
+    <!-- feed starts -->
+    <div class="feed">
+        <div class="feed__header">
+            <div class="firstPartHeader">
+                <h2>Bookmarks</h2>
+                <span class="post__headerSpecial">@somanathg</span>
+            </div>
+            <div class="secondPartHeader">
+                <button class="bookmarkClear">Clear all Bookmarks</button>
+            </div>
+        </div>
+
+      <!-- post starts -->
+      <div class="post">
+        <div class="post__avatar">
+          <img
+            src="https://i.pinimg.com/564x/e9/cc/7a/e9cc7a5688a146138296d7f2557c48c7.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="post__body">
+          <div class="post__header">
+            <div class="post__headerText">
+              <h3>
+                Big Boss
+                <span class="post__headerSpecial"
+                  ><span class="material-icons post__badge"> verified </span>@bigboss</span
+                >
+              </h3>
+            </div>
+            <div class="post__headerDescription">
+              <p>Manifesting makapasar with flying colors.</p>
+            </div>
+          </div>
+          <img
+            src="https://assets.nick.com/uri/mgid:arc:imageassetref:shared.nick.us:0d7c8540-40ca-412c-b025-ea99b40ec3ef?quality=0.7&gen=ntrn&legacyStatusCode=true"
+            alt=""
+          />
+          <div class="post__footer">
+            <span class="material-icons"> repeat </span>
+            <span class="material-icons"> favorite_border </span>
+            <span class="material-icons"> publish </span>
+          </div>
+        </div>
+      </div>
+      <!-- post ends -->
+
+      <!-- post starts -->
+      <div class="post">
+        <div class="post__avatar">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt=""
+          />
+        </div>
+
+        <div class="post__body">
+          <div class="post__header">
+            <div class="post__headerText">
+              <h3>
+                Utok nga Brayt
+                <span class="post__headerSpecial"
+                  ><span class="material-icons post__badge"> verified </span>@BraytBrains</span
+                >
+              </h3>
+            </div>
+            <div class="post__headerDescription">
+              <p>Lesson Learned: mas dako pa akong nagasto kesa akong nakuhang grado <br> (simbako palayo).</p>
+            </div>
+          </div>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSswO0KMNW2OfIIdO_nE6hLZ-5YAMde42Cetg&usqp=CAU"
+            alt=""
+          />
+          <div class="post__footer">
+            <span class="material-icons"> repeat </span>
+            <span class="material-icons"> favorite_border </span>
+            <span class="material-icons"> publish </span>
+          </div>
+        </div>
+      </div>
+      <!-- post ends -->
+    </div>
+    <!-- feed ends -->
+
+    <!-- widgets starts -->
+    <div class="widgets">
+      <div class="widgets__input">
+        <span class="material-icons widgets__searchIcon"> search </span>
+        <input type="text" placeholder="Search Twitter" />
+      </div>
+
+      <div class="widgets__widgetContainer">
+        <h2>What's happening?</h2>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            Sunsets don&#39;t get much better than this one over
+            <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw">@GrandTetonNPS</a>.
+            <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw"
+              >#nature</a
+            >
+            <a href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw"
+              >#sunset</a
+            >
+            <a href="http://t.co/YuKy2rcjyU">pic.twitter.com/YuKy2rcjyU</a>
+          </p>
+          &mdash; US Department of the Interior (@Interior)
+          <a href="https://twitter.com/Interior/status/463440424141459456?ref_src=twsrc%5Etfw"
+            >May 5, 2014</a
+          >
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
+    <!-- widgets ends -->
+
+    <!-- JAVASCRIPT FUNCTIONS -->
+    <script>
+        function goToHomepage() {
+          window.location.href = "homepageFinal.html";
+        }
+        function goToExplore(){
+          window.location.href = "explore.html";
+        }
+        function goToNotifications(){
+          window.location.href = "notifications.html";
+        }
+        function goToMessages(){
+          window.location.href = "messages.html";
+        }
+        function goToBookmarks(){
+          window.location.href = "bookmarks.html";
+        }
+        function goToLists(){
+          window.location.href = "lists.html";
+        }
+        function goToProfile(){
+          window.location.href = "profile.html";
+        }
+        function goToMore(){
+          window.location.href = "more.html";
+        }
+    </script>
+    <!-- JAVASCRIPT FUNCTIONS -->
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>messages</title>
+    <link rel="stylesheet" href="messages.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous"
+    />
+</head>
+<body>
+    <!-- sidebar starts -->
+    <div class="sidebar">
+        <i class="fab fa-twitter"></i>
+        <div class="sidebarOption" onclick="goToHomepage()">
+          <span class="material-icons"> home </span>
+          <h2>Home</h2>
+        </div>
+  
+        <div class="sidebarOption" onclick="goToExplore()">
+          <span class="material-icons"> search </span>
+          <h2>Explore</h2>
+        </div>
+  
+        <div class="sidebarOption" onclick="goToNotifications()">
+          <span class="material-icons"> notifications_none </span>
+          <h2>Notifications</h2>
+        </div>
+  
+        <div class="sidebarOption active" onclick="goToMessages()">
+          <span class="material-icons"> mail_outline </span>
+          <h2>Messages</h2>
+        </div>
+  
+        <div class="sidebarOption" onclick="goToBookmarks()">
+          <span class="material-icons"> bookmark_border </span>
+          <h2>Bookmarks</h2>
+        </div>
+  
+        <div class="sidebarOption" onclick="goToLists()">
+          <span class="material-icons"> list_alt </span>
+          <h2>Lists</h2>
+        </div>
+  
+        <div class="sidebarOption" onclick="goToProfile()">
+          <span class="material-icons"> perm_identity </span>
+          <h2>Profile</h2>
+        </div>
+  
+        <div class="sidebarOption" onclick="goToMore()">
+          <span class="material-icons"> more_horiz </span>
+          <h2>More</h2>
+        </div>
+        <button class="sidebar__tweet">Tweet</button>
+      </div>
+      <!-- sidebar ends -->
+
+      <!--FEED STARTS-->
+      <div class="messageFeed">
+        <div class="messagefeed__header">
+            <div class="firstPartHeader">
+                <h2>Messages</h2>
+            </div>
+            <div class="secondPartHeader">
+                <span class="material-icons"> mail_outline </span>
+            </div>
+        </div>
+      </div>
+      <!--FEED ENDS-->
+
+      <!--MESSAGE STARTS-->
+      <div class="message">
+        <div class="messageFeed2">
+            <div class="messagefeed__header2">
+                <div class="firstPartHeader2">
+                    <h2>Batman</h2>
+                    <span class="post__headerSpecial">@bahalanasibatman</span>
+                </div>
+                <div class="secondPartHeader2">
+                    <span class="material-icons"> info </span>
+                </div>
+            </div>
+          </div>
+      </div>
+      <!--MESSAGE ENDS-->
+
+      <!-- JAVASCRIPT FUNCTIONS -->
+    <script>
+        function goToHomepage() {
+          window.location.href = "homepageFinal.html";
+        }
+        function goToExplore(){
+          window.location.href = "explore.html";
+        }
+        function goToNotifications(){
+          window.location.href = "notifications.html";
+        }
+        function goToMessages(){
+          window.location.href = "messages.html";
+        }
+        function goToBookmarks(){
+          window.location.href = "bookmarks.html";
+        }
+        function goToLists(){
+          window.location.href = "lists.html";
+        }
+        function goToProfile(){
+          window.location.href = "profile.html";
+        }
+        function goToMore(){
+          window.location.href = "more.html";
+        }
+    </script>
+    <!-- JAVASCRIPT FUNCTIONS -->
+</body>
+</html>
